@@ -1,0 +1,39 @@
+@import "vars"
+@import "blocks"
+@import "typography"
+@import "common-styles"
+
+@import "header"
+
+
+// ========================================
+
+
+body
+  margin: 0
+  padding: 0
+  font-size: 14px
+  overflow-x: hidden
+
+  #content
+    position: relative
+    margin-top: 40px
+    transition: all 300ms
+
+    @media (min-width: 1500px)
+      &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        width: calc((100vw - 1500px) / 2)
+        background: $xlt-grey
+
+  .content-wrap
+    width: calc(100% - 20px)
+    max-width: 1000px
+    margin: 0 auto
+
+*
+  box-sizing: border-box

@@ -2,6 +2,7 @@ extends layout
 
 include partials/mixins/article-tile
 include partials/mixins/article-tile-sm
+include partials/mixins/article-tile-xs
 //- title, img, author, date, ...tags
 
 block append vars
@@ -61,3 +62,7 @@ block content
       .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
       .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
       .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row
+      .col-xs-12.text-center
+        button See more stories

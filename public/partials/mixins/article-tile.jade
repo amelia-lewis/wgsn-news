@@ -1,7 +1,7 @@
 mixin article-tile(title, img, author, date, ...tags)
   .article-tile
     hr
-    h2.text-center= title
+    a(href="/article"): h2.text-center= title
     img(src=img width="100%")
     
     .text.block-top-sm.block-bot-md.block-hor-sm.text-center

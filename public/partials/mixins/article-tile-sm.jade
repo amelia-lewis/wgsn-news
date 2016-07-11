@@ -1,8 +1,8 @@
 mixin article-tile-sm(title, img, author, date, ...tags)
-  .article-tile-sm
+  .article-tile.article-tile-sm
     hr
     img(src=img width="100%")
-    h3.text-center= title
+    a(href="/article"): h3.text-center= title
     
     .text.block-top-sm.block-bot-md.block-hor-sm.text-center
       p.tight By 

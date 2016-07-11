@@ -1,8 +1,63 @@
 extends layout
 
+include partials/mixins/article-tile
+include partials/mixins/article-tile-sm
+//- title, img, author, date, ...tags
+
 block append vars
   - bodyclass = 'index'
 
 block content
   .content-wrap
-    h1 News
+    .row
+      .col-xs-6
+        h1 News
+
+      .col-xs-6.text-right
+        h4 Favourites
+      
+    hr
+
+    .row
+      .col-xs-12
+        .block-ver-md
+          .banner.flex-center.bg-lt-grey.block-hor-lg.text-center: p Cut through the noise with our curation of the must-read, most important, need-to-know industry developments
+
+      .col-xs-12.text-center.block-bot-md
+        .inline-block.block-hor-sm
+          p.tight Filter by
+        
+        .inline-block.block-hor-sm
+          select
+            option All countries
+            option USA
+            option UK
+            option Australia
+
+        .inline-block.block-hor-sm
+          select
+            option All categories
+            option Accessories
+            option Active
+            option Beauty
+
+    hr
+
+    .row.block-top-lg
+      .col-xs-12.col-sm-12: +article-tile("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row
+      .col-xs-12.col-sm-6: +article-tile("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6: +article-tile("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6: +article-tile("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6: +article-tile("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6: +article-tile("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6: +article-tile("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row
+      .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile-sm("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")

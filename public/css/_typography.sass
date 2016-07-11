@@ -22,6 +22,9 @@
 .text-spaced
   letter-spacing: 0.1em
 
+.text-underline
+  text-decoration: underline
+
 
 // ====================
 // Alignment
@@ -51,7 +54,7 @@
 .text-lowercase
   text-transform: lowercase
 
-.text-uppercase, h1, h2, h3, h4, h5
+.text-uppercase, h1
   text-transform: uppercase
 
 .text-capitalize
@@ -80,6 +83,9 @@ ul, ol
 .text-smaller, small
   font-size: 0.8em
 
+.text-bigger
+  font-size: 1.4em
+
 
 // ====================
 // Styles
@@ -93,27 +99,3 @@ ul.ul-bare
 
 .text-grey
   color: $md-grey
-
-.main-title
-  position: fixed
-  top: 50px
-  right: 10px
-  transition: all 300ms
-  font-size: 2.4em
-  line-height: 1em
-  display: none
-  z-index: 100
-
-  @media (min-width: $screen-sm-min)
-    font-size: 6em
-    display: block
-
-  @media (min-width: $screen-md-min)
-    font-size: 8em
-
-  @media (min-width: 1500px)
-    right: calc((100vw - 1500px) / 2)
-
-body.headroom--not-top
-  .main-title
-    opacity: 0.3

@@ -1,0 +1,13 @@
+mixin article-tile-sm(title, img, author, date, ...tags)
+  .article-tile-sm
+    hr
+    img(src=img width="100%")
+    h3.text-center= title
+    
+    .text.block-top-sm.block-bot-md.block-hor-sm.text-center
+      p.tight By 
+        span= author
+      p.tight= date
+      ul.ul-bare.text-center
+        each tag in tags
+          li.inline-block.block-hor-xs.text-underline= tag

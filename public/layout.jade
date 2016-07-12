@@ -15,17 +15,20 @@ html
   
   body(class=bodyclass)
     header.bg-black
+      .content-wrap
+        a.pull-right.block-sm(href="/search-results") Search results
     
     #content.block-ver-lg
       .content-wrap
         .row
           .col-xs-6
-            a(href="/"): h1 News
+            a(href="/"): h1.tight News
 
           .col-xs-6.text-right
-            h4 
-              i.fa.fa-heart
-              span  Favourites
+            a(href="/favourites")
+              h4.tight
+                i.fa.fa-heart
+                span  Favourites
           
         hr
       

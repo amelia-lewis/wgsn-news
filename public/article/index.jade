@@ -1,6 +1,6 @@
-extends layout
+extends ../layout
 
-include partials/mixins/article-tile
+include ../partials/mixins/article-tile
 //- title, img, author, date, ...tags
 
 block append vars
@@ -77,4 +77,4 @@ block content
         +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
         +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
 
-    .row: .col-xs-12: include partials/most-viewed
+    .row: .col-xs-12: include ../partials/most-viewed

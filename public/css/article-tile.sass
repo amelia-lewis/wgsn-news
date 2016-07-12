@@ -29,6 +29,7 @@
     @media (min-width: $screen-sm-min)
       display: block
 
+
 // ====================
 // Home page
 // ====================
@@ -62,14 +63,35 @@ body.index
         @media (min-width: $screen-sm-min)
           display: block
 
-.article-tile-xs
-  margin: 0 auto 20px
-  width: 100%
 
 // ====================
-// Article page
+// Article view
 // ====================
 body.article-view
+  .article-tile
+    .article-title-1
+      display: none
+
+    hr
+      max-width: 100%
+
+
+// ====================
+// Favourites view
+// ====================
+body.favourites-view
+  .article-tile
+    .article-title-1
+      display: none
+
+    hr
+      max-width: 100%
+
+
+// ====================
+// Search Results view
+// ====================
+body.search-results-view
   .article-tile
     .article-title-1
       display: none

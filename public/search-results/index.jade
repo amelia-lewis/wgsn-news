@@ -1,0 +1,23 @@
+extends ../layout
+
+include ../partials/mixins/article-tile
+//- title, img, author, date, ...tags
+
+block append vars
+  - bodyclass = 'search-results-view'
+
+block content
+  .content-wrap
+    .row
+      .col-xs-12
+        p Seach results for "asos"
+    
+    .row
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("ASOS powers ahead and no initial mention of Brexit", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Ecommerce", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("ASOS powers ahead and no initial mention of Brexit", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Ecommerce", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("ASOS powers ahead and no initial mention of Brexit", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Ecommerce", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("ASOS powers ahead and no initial mention of Brexit", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Ecommerce", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("ASOS powers ahead and no initial mention of Brexit", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Ecommerce", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("ASOS powers ahead and no initial mention of Brexit", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Ecommerce", "Menswear", "Retail", "Womenswear")
+
+    .row: .col-xs-12: include ../partials/most-viewed

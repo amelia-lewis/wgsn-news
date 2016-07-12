@@ -1,8 +1,6 @@
 extends layout
 
 include partials/mixins/article-tile
-include partials/mixins/article-tile-sm
-include partials/mixins/article-tile-xs
 //- title, img, author, date, ...tags
 
 block append vars
@@ -12,26 +10,18 @@ block content
   .content-wrap
     .row
       .col-xs-6
-        h1 News
+        p &lt; Previous
 
       .col-xs-6.text-right
-        h4 
-          i.fa.fa-heart
-          span  Favourites
-      
-    hr
-
-    .row
-      .col-xs-12
-        p &lt; Previous
+        p Next &gt;
 
     .row.article-masthead
       .col-xs-12
         .block-ver-lg.text-center
-          h2 Breaking News: Big changes at Burberry... Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post
+          h2 ASOS powers ahead and no initial mention of Brexit
           p By Nigel Taylor
-          p Burberry Group has named luxury veteran and Céline head Marco Gobbetti as its surprise new chief executive, replacing Christopher Bailey. The news sent Burberry’s...
-          p 7 hours ago / Menswear, Retail, Womenswear
+          p.article-subline.text-bigger And now for something completely different… A UK fashion retailer that’s seeing surging sales. Yes, Asos is flying with sales up almost third in the four...
+          p 7 hours ago / Ecommerce, Menswear, Retail, Womenswear
 
         hr
 
@@ -40,23 +30,36 @@ block content
 
     .row
       .col-xs-12.col-sm-12.col-md-8
+        .article-utilities-mobile.block-bot-md
+          ul.ul-bare.text-center
+            li.text-uppercase.inline-block.block-hor-sm
+              i.fa.fa-envelope
+              span  Email
+            //- li.text-uppercase.inline-block.block-hor-sm
+            //-   i.fa.fa-print
+            //-   span  Print
+            li.text-uppercase.inline-block.block-hor-sm
+              i.fa.fa-heart
+              span  Add to Favourites
+        
         .article-text.block-bot-lg
-          p Burberry Group has named luxury veteran and Céline head Marco Gobbetti as its surprise new chief executive, replacing Christopher Bailey. The news sent Burberry’s shares up 6.4% in afternoon trading.
-          p Bailey, 45, steps down from his two-year tenure after attracting criticism for holding the dual roles of both chief executive and creative head, the latter position he maintains as well as the title of president.
-          p Gobbetti, currently the CEO and chairman of the French fashion house owned by LVMH, will take up his new role next year, although Burberry did not give a date. He will be responsible “for all commercial, operational and financial elements of the business”.
-          p Gobbetti has worked in luxury for the past 20 years on brands such as Givenchy, Moschino and Bottega Veneta.
-          p His appointment comes as Burberry, due to give its Q1 trading statement Wednesday, has found it tough going in the wider luxury downturn, especially in Greater China and the US. Under Bailey’s tenure, Burberry announced a string of cost-cutting measures to the tune of £100m a year by 2019, plus a share-buyback, as it reported a fall in profits.
-          p Burberry’s shares have fallen 22% since Bailey replaced longtime CEO Angela Ahrendts at the helm.
-          p On the new boss, Bailey said: “On a personal level, I know that we are going to enjoy a wonderfully collaborative partnership that makes me very excited for our future at Burberry.
-          p Commenting on the news, WGSN chief content officer Carla Buzasi said: “The City has always been nervous about Christopher as both CEO and Chief Creative Officer. I disagree with the concept that a creative leader cannot be a commercial leader, which seemed to be the opinion of many, but completely understand the view that on a practical level, the reality of juggling two huge roles, would be difficult for even the very best.
-          p “It’s therefore unsurprising that the market has reacted so positively to the news that a new CEO has been hired, giving Bailey the time and space to concentrate on creating the very best collections, and building the very best brand, and allowing one person to fully concentrate on the role of CEO.”
-          p Also next year, Julie Brown will become chief operating officer and chief financial officer replacing current CFO Carol Fairweather, who has decided to “pursue new opportunities”. Brown will join from global medical technology business Smith & Nephew, again starting date unknown. Fairweather will step down from the board by the end of next January and leave at the end of the financial year.
-          p Burberry chairman Sir John Peace said: “With Julie’s appointment, we have an individual who has an outstanding track record in the commercial and financial aspects of a global business as well as business transformation.
+          p And now for something completely different… A UK fashion retailer that’s seeing surging sales. Yes, Asos is flying with sales up almost third in the four months to June 30 and a promise to end the year up maybe 25% ahead. All that and not one trading statement mention of the ‘B’ word from an online fashion retail giant operating a world away from the beleaguered high street.
+          p Retail sales for the four months period were up 30% to £500.5m, or up 26% currency neutral, underpinned by continued price and proposition investments.
+          p UK sales grew 28% and International was up an even better 31% with the retailer saying it has seen a further acceleration across the US, EU, and rest of world segment.
+          p As anticipated, retail gross margin for the period was down 180 basis points, about 40% of which is due to moving its main sale period forward one week from a year ago.
+          p Its retail gross margin guidance of up to 50 basis points and the retailer said it remains confident in delivering current market expectations for pre-tax profit.
+          p Later in a conference call, that ‘B’ word came up and chief executive Nick Beighton said: “In terms of the EU referendum, it’s difficult to predict what the long-term consequences are going to be for both the UK and Asos.
+          p “But in the shorter term, Asos stands to gain,” he said. “In the medium term, we are expecting a benefit from the weaker exchange rate,” as Asos generates around 60% of its sales overseas.
 
-        hr
+        .block-bot-lg.text-center.text-bigger
+          i.fa.fa-facebook.block-hor-sm
+          i.fa.fa-twitter.block-hor-sm
+          i.fa.fa-google-plus.block-hor-sm
+          i.fa.fa-pinterest-p.block-hor-sm
+          i.fa.fa-linkedin.block-hor-sm
 
       .col-xs-12.col-sm-12.col-md-4
-        .block-bot-lg
+        .article-utilities-desktop.block-bot-lg
           ul.ul-bare
             li.text-uppercase
               i.fa.fa-envelope
@@ -71,6 +74,8 @@ block content
         hr
         h3 Related News
         hr
-        +article-tile-xs("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
-        +article-tile-xs("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
-        +article-tile-xs("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row: .col-xs-12: include partials/most-viewed

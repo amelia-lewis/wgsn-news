@@ -1,20 +1,50 @@
 .article-tile
-  margin: 0 auto 40px
-  width: 90%
+  margin: 0 auto
 
-  @media (min-width: $screen-sm-min)
-    width: 80%
-  
   hr
     max-width: 160px
 
-.col-sm-12
-  .article-tile
-    max-width: 600px
+// ====================
+// Home page
+// ====================
+body.index
+  .col-sm-12
+    .article-tile
+      max-width: 600px
 
-    h2
-      font-size: 2em
+      .article-title-2
+        display: none
+
+      h2
+        font-size: 2em
+
+  .col-md-6
+    .article-tile
+      .article-title-2
+        display: none
+
+  .col-md-4
+    .article-tile
+      .article-title-1
+        display: block
+
+        @media (min-width: $screen-sm-min)
+          display: none
+
+      .article-title-2
+        display: none
+
+        @media (min-width: $screen-sm-min)
+          display: block
 
 .article-tile-xs
   margin: 0 auto 20px
   width: 100%
+
+// ====================
+// Article page
+// ====================
+body.article-view
+  .article-tile
+    .article-title-1
+      display: none

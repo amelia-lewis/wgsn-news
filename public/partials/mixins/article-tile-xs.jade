@@ -1,9 +1,0 @@
-mixin article-tile-xs(title, img, author, date, ...tags)
-  .article-tile.article-tile-xs
-    img(src=img width="100%")
-    
-    .text.block-top-sm.block-bot-md.block-hor-sm.text-center
-      p By 
-        span= author
-      a(href="/article"): h3.text-center= title
-      p.tight= date

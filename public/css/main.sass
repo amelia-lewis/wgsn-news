@@ -6,6 +6,7 @@
 @import "header"
 @import "article-tile"
 @import "article"
+@import "most-viewed"
 
 
 // ========================================
@@ -26,11 +27,15 @@ body
     max-width: 1000px
     margin: 0 auto
 
-  .banner
-    height: 120px
+  .banner-container
+    display: none
+
+    .flex-center
+      height: 200px
+      width: 100%
 
     @media (min-width: $screen-sm-min)
-      height: 200px
+      display: flex
 
 *
   box-sizing: border-box

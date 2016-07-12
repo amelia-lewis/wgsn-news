@@ -1,13 +1,14 @@
 mixin article-tile(title, img, author, date, ...tags)
-  .article-tile
+  .article-tile.block-bot-lg
     hr
-    a(href="/article"): h2.text-center= title
+    a.article-title-1(href="/article"): h2.text-center= title
     img(src=img width="100%")
+    a.article-title-2.block.block-top-sm(href="/article"): h3.text-center= title
     
-    .text.block-top-sm.block-bot-md.block-hor-sm.text-center
+    .text.block-top-sm.block-hor-sm.text-center
       p.tight By 
         span= author
       p.tight= date
-      ul.ul-bare.text-center
+      ul.ul-bare.text-center.tight
         each tag in tags
-          li.inline-block.block-hor-xs.text-underline= tag
+          li.inline-block.block-hor-xs.text-underline.tight= tag

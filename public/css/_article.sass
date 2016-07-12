@@ -1,4 +1,8 @@
 .article-view
+  
+  // ====================
+  // Masthead
+  // ====================
   .article-masthead
     .block-ver-lg
       margin: 0 auto
@@ -13,12 +17,39 @@
       @media (min-width: $screen-md-min)
         font-size: 3em
 
+    .article-subline
+      display: none
+
+      @media (min-width: $screen-sm-min)
+        display: block
+
     hr
       max-width: 200px
 
+  // ====================
+  // Utiltiies
+  // ====================
+  .article-utilities-mobile
+    display: block
+
+    @media (min-width: $screen-sm-min)
+      display: none
+
+  .article-utilities-desktop
+    display: none
+
+    @media (min-width: $screen-sm-min)
+      display: block
+
+  // ====================
+  // Text
+  // ====================
   .article-text
     p
-      font-size: 1.3em
+      font-size: 1.2em
+      
+      @media (min-width: $screen-sm-min)
+        font-size: 1.3em
 
       &:first-child:first-letter
         float: left

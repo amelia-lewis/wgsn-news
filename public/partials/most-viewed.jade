@@ -1,5 +1,8 @@
+include mixins/article-tile
+//- title, img, author, date, ...tags
+
 .most-viewed.block-top-lg
-  .block-top-lg.block-hor-lg.bg-black
+  .block-lg.bg-black
     .row
       .col-xs-12.text-center
         h2 Most Viewed this Week
@@ -7,3 +10,16 @@
     .row
       .col-xs-12.col-sm-6: +article-tile("Gap records first comps success in over a year in a quiet June for US retail", "../img/rectangle.jpg", "Nigel Taylor", "07.08.16", "Menswear", "Retail", "Womenswear")
       .col-xs-12.col-sm-6: +article-tile("Gap records first comps success in over a year in a quiet June for US retail", "../img/rectangle.jpg", "Nigel Taylor", "07.08.16", "Menswear", "Retail", "Womenswear")
+
+    .row
+      .col-xs-12.text-center
+        .dot.active
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot
+        .dot

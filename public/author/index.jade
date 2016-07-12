@@ -1,0 +1,45 @@
+extends ../layout
+
+include ../partials/mixins/article-tile
+//- title, img, author, date, ...tags
+
+block append vars
+  - bodyclass = 'author-view'
+
+block content
+  .content-wrap
+    .row
+      .col-xs-12
+        .bg-black.block-lg.text-center
+          p.text-uppercase WGSN / Experts
+          hr.hr-narrow
+          h2.block-bot-xs Nigel Taylor
+          hr.hr-narrow
+          p.tight Last entry 7 hours ago / Ecommerce, Menswear, Retail, Womenswear
+          .block-top-md: i.fa.fa-twitter
+
+    .row
+      .col-xs-12
+        .block-ver-md.text-center
+          p.tight 3636 stories
+    
+    .row
+      .col-xs-12.col-sm-12.col-md-12: +article-tile("Breaking News: Big changes at Burberry… Céline’s Gobbetti to replace Bailey as CEO, Brown to become COO, CFO as Fairweather quits financial post", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row
+      .col-xs-12.col-sm-6.col-md-6: +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-6: +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-6: +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-6: +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-6: +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-6: +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row: .col-xs-12: include ../partials/most-viewed

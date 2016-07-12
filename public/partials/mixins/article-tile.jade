@@ -6,9 +6,9 @@ mixin article-tile(title, img, author, date, ...tags)
     a.article-title-2.block.block-top-sm(href="/article"): h3.text-center= title
     
     .text.block-top-sm.block-hor-sm.text-center
-      p.tight By 
+      p.article-tile-author By 
         span= author
-      p.tight= date
-      ul.ul-bare.text-center.tight
+      p.article-tile-date= date
+      ul.ul-bare.text-center.tight.article-tile-tags
         each tag in tags
           li.inline-block.block-hor-xs.text-underline.tight= tag

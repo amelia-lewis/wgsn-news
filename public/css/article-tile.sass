@@ -4,6 +4,31 @@
   hr
     max-width: 160px
 
+  .article-tile-author,
+  .article-tile-date
+    position: relative
+    display: inline-block
+    margin: 0 7px
+
+    @media (min-width: $screen-sm-min)
+      display: block
+      margin: 0
+
+  .article-tile-author:after
+    content: "/"
+    position: absolute
+    top: 0
+    right: -9px
+
+    @media (min-width: $screen-sm-min)
+      display: none
+
+  .article-tile-tags
+    display: none
+
+    @media (min-width: $screen-sm-min)
+      display: block
+
 // ====================
 // Home page
 // ====================
@@ -48,3 +73,6 @@ body.article-view
   .article-tile
     .article-title-1
       display: none
+
+    hr
+      max-width: 100%

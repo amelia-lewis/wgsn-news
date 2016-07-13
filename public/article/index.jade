@@ -8,39 +8,33 @@ block append vars
 
 block content
   .content-wrap
-    .row
-      .col-xs-6
-        p &lt; Previous
-
-      .col-xs-6.text-right
-        p Next &gt;
-
-    .row.article-masthead
-      .col-xs-12
-        .block-ver-lg.text-center
-          h2 ASOS powers ahead and no initial mention of Brexit
-          p By Nigel Taylor
-          p.article-subline.text-bigger And now for something completely different… A UK fashion retailer that’s seeing surging sales. Yes, Asos is flying with sales up almost third in the four...
-          p 7 hours ago / Ecommerce, Menswear, Retail, Womenswear
-
-        hr
-
-        .block-ver-lg.text-center
-          img(src="../img/rectangle.jpg" width="100%")
-
-    .row
+    .row.block-top-lg
       .col-xs-12.col-sm-12.col-md-8
+        .article-masthead.text-center
+          h2 ASOS powers ahead and no initial mention of Brexit
+          p.article-author.serif.text-italic.text-grey By 
+            a.text-underline(href="/author") Nigel Taylor
+          p.article-subline.text-bigger.block-ver-sm And now for something completely different… A UK fashion retailer that’s seeing surging sales. Yes, Asos is flying with sales up almost third in the four...
+          p.article-date.serif.text-italic.text-grey 9 hours ago
+          ul.article-tags.ul-bare.text-center
+            li.inline-block.block-hor-xs.tight.text-smaller.wgsn-font.text-grey Ecommerce
+            li.inline-block.block-hor-xs.tight.text-smaller.wgsn-font.text-grey Menswear
+            li.inline-block.block-hor-xs.tight.text-smaller.wgsn-font.text-grey Retail
+            li.inline-block.block-hor-xs.tight.text-smaller.wgsn-font.text-grey Womenswear
+          
+          .block-ver-lg: img(src="https://www.wgsn.com/news/wp-content/uploads_21/2016/07/asos.png" width="100%")
+        
         .article-utilities-mobile.block-bot-md
           ul.ul-bare.text-center
             li.text-uppercase.inline-block.block-hor-sm
-              i.fa.fa-envelope
-              span  Email
+              i.icon.icon-envelope
+              span.wgsn-font  Email
             //- li.text-uppercase.inline-block.block-hor-sm
             //-   i.fa.fa-print
             //-   span  Print
             li.text-uppercase.inline-block.block-hor-sm
-              i.fa.fa-heart
-              span  Add to Favourites
+              i.icon.icon-heart
+              span.wgsn-font  Add to Favourites
         
         .article-text.block-bot-lg
           p And now for something completely different… A UK fashion retailer that’s seeing surging sales. Yes, Asos is flying with sales up almost third in the four months to June 30 and a promise to end the year up maybe 25% ahead. All that and not one trading statement mention of the ‘B’ word from an online fashion retail giant operating a world away from the beleaguered high street.
@@ -62,19 +56,17 @@ block content
         .article-utilities-desktop.block-bot-lg
           ul.ul-bare
             li.text-uppercase
-              i.fa.fa-envelope
-              span  Email
+              i.icon.icon-envelope
+              span.wgsn-font  Email
             li.text-uppercase
-              i.fa.fa-print
-              span  Print
+              i.icon.icon-print
+              span.wgsn-font  Print
             li.text-uppercase
-              i.fa.fa-heart
-              span  Add to Favourites
+              i.icon.icon-heart
+              span.wgsn-font  Add to Favourites
 
-        hr
         h3 Related News
-        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
-        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
-        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
-
-    .row: .col-xs-12: include ../partials/most-viewed
+        hr
+        +article-tile("Max Azria “no longer running” BCBG as Staff is appointed interim CEO", "https://www.wgsn.com/news/wp-content/uploads_21/2016/07/bcbg.png", "Nigel Taylor", "9 Hours Ago", "Retail", "Womenswear")
+        +article-tile("John Lewis weekly sales recover on clearance, warm weather goods demand", "https://www.wgsn.com/news/wp-content/uploads_21/2016/07/john-lewis-.png", "Nigel Taylor", "9 Hours Ago", "Interiors", "Menswear", "Retail", "Womenswear")
+        +article-tile("Asos powers ahead and no initial mention of Brexit", "https://www.wgsn.com/news/wp-content/uploads_21/2016/07/asos.png", "Nigel Taylor", "12.07.16", "Menswear", "Retail", "Womenswear")

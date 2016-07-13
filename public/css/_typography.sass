@@ -39,7 +39,7 @@
   letter-spacing: 0.1em
 
 .text-underline
-  text-decoration: underline
+  border-bottom: 1px solid
 
 
 // ====================
@@ -117,8 +117,17 @@ ul.ul-bare
 .text-white
   color: white
 
+  &.text-underline
+    border-color: white
+
 .text-grey
   color: $md-grey
 
+  &.text-underline
+    border-color: $md-grey
+
 .text-black
   color: black
+
+  &.text-underline
+    border-color: black

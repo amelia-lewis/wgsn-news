@@ -4,18 +4,14 @@
   // Masthead
   // ====================
   .article-masthead
-    .block-ver-lg
-      margin: 0 auto
-
-      @media (min-width: $screen-sm-min)
-        width: 80%
-    
     h2
       @media (min-width: $screen-sm-min)
         font-size: 2em
+        line-height: 1.1em
 
       @media (min-width: $screen-md-min)
         font-size: 3em
+        line-height: 1.1em
 
     .article-subline
       display: none
@@ -23,8 +19,8 @@
       @media (min-width: $screen-sm-min)
         display: block
 
-    hr
-      max-width: 200px
+    .article-tags
+      margin: 20px 0 0
 
   // ====================
   // Utiltiies
@@ -46,12 +42,14 @@
   // ====================
   .article-text
     p
+      @extend .serif
       font-size: 1.2em
       
       @media (min-width: $screen-sm-min)
         font-size: 1.3em
 
       &:first-child:first-letter
+        @extend .wgsn-font
         float: left
         font-size: 75px
         line-height: 70px

@@ -40,6 +40,10 @@ hr
   &.hr-narrow
     max-width: 200px
 
+
+// ====================
+// Backgrounds & Borders
+// ====================
 .bg-black
   background: black
   color: white
@@ -56,6 +60,14 @@ hr
 .bg-lt-grey
   background: $lt-grey
 
+// BORDERS & SHADOWS
+.border
+  border: 1px solid $lt-grey
+
+@each $side in top, right, bottom, left
+  .border-#{$side}
+    border-#{$side}: 1px solid $lt-grey
+
 
 // ====================
 // Buttons
@@ -67,7 +79,8 @@ button
   border: 2px solid black
   height: 40px
   padding: 9px 20px
-  font-family: "Coming Soon", sans-serif
+  // font-family: "Coming Soon", sans-serif
   font-size: 1em
   @extend .text-uppercase
+  @extend .wgsn-font
   cursor: pointer

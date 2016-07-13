@@ -1,31 +1,13 @@
 mixin article-tile(title, img, author, date, ...tags)
-<<<<<<< HEAD
-  .article-tile
-    .block-bot-md: a(href="/article"): h2.text-center= title
-    img(src=img width="100%")
-    
-    .text.block-md.text-center
-      p.tight By 
-        span= author
-      p.tight= date
-      ul.ul-bare.text-center
-        each tag in tags
-          li.inline-block.block-hor-xs.text-underline= tag
-
-    hr
-=======
-  .article-tile.block-bot-lg
-    hr.hr-narrow
-    a.article-title-1(href="/article"): h2.text-center= title
-    a(href="/article"): img(src=img width="100%")
-    
-    .text.block-top-sm.block-hor-sm.text-center
-      a(href="/author")
-        p.article-tile-author By 
+  .block-bot-lg
+    a.block.article-tile.border(href="/article")
+      img(src=img width="100%")
+      
+      .text.bg-white.block-md.text-center
+        p.article-tile-author.serif.text-italic.text-grey By 
           span= author
-      a.article-title-2.block.block-top-sm(href="/article"): h3.text-center= title
-      p.article-tile-date= date
-      ul.ul-bare.text-center.tight.article-tile-tags
-        each tag in tags
-          li.inline-block.block-hor-xs.text-underline.tight= tag
->>>>>>> master
+        h3.article-tile-title.block.block-top-sm.text-center= title
+        p.article-tile-date.serif.text-italic.text-grey= date
+        ul.article-tile-tags.ul-bare.text-center
+          each tag in tags
+            li.inline-block.block-hor-xs.tight.text-smaller.wgsn-font.text-grey= tag

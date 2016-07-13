@@ -1,9 +1,14 @@
 .article-tile
   margin: 0 auto
   transition: all 300ms
+  position: relative
+
+  a, img, p
+    display: block
+    transition: all 400ms
 
   &:hover
-    opacity: 0.75
+    box-shadow: 0 2px 30px rgba(black, 0.1)
 
   .article-tile-author,
   .article-tile-date
@@ -29,6 +34,7 @@
 
     @media (min-width: $screen-sm-min)
       display: block
+      margin: 20px 0 0
 
 
 // ====================
@@ -36,15 +42,39 @@
 // ====================
 body.index,
 body.author-view
-  .col-sm-12
+  
+  // Featured article
+  .col-md-12
     .article-tile
-      max-width: 600px
+      // overflow: auto
+      height: 500px
+      border: none
+      
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: auto
+        height: 100%
 
-      .article-title-2
-        display: none
+      .text
+        @extend .block-lg
+        position: absolute
+        left: 45%
+        top: 50%
+        transform: translate3d(0, -50%, 0)
+        @extend .border
+        border-top: 3px solid black
+        transition: all 400ms
 
-      h2
-        font-size: 2em
+        .article-tile-title
+          font-size: 2em
+
+      &:hover
+        box-shadow: none
+        
+        .text
+          box-shadow: 0 2px 30px rgba(black, 0.1)
 
   .col-md-6
     .article-tile
@@ -79,33 +109,3 @@ body.article-view
 
     .article-tile-tags
       display: none
-
-
-// ====================
-// Favourites & Search Results view
-// ====================
-body.favourites-view,
-body.search-results-view
-  .article-tile
-    .article-title-1
-      display: none
-
-    hr
-      max-width: 100%
-
-  .col-xs-12:nth-child(1)
-    .article-tile
-      hr
-        display: none
-
-  @media (min-width: $screen-xs-min)
-    .col-xs-12:nth-child(2)
-      .article-tile
-        hr
-          display: none
-    
-  @media (min-width: $screen-sm-min)
-    .col-xs-12:nth-child(3)
-      .article-tile
-        hr
-          display: none

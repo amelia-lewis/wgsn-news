@@ -1,0 +1,111 @@
+.article-tile
+  margin: 0 auto
+  transition: all 300ms
+
+  &:hover
+    opacity: 0.75
+
+  .article-tile-author,
+  .article-tile-date
+    position: relative
+    display: inline-block
+    margin: 0 7px
+
+    @media (min-width: $screen-sm-min)
+      display: block
+      margin: 0
+
+  .article-tile-author:after
+    content: "/"
+    position: absolute
+    top: 0
+    right: -9px
+
+    @media (min-width: $screen-sm-min)
+      display: none
+
+  .article-tile-tags
+    display: none
+
+    @media (min-width: $screen-sm-min)
+      display: block
+
+
+// ====================
+// Home & Author views
+// ====================
+body.index,
+body.author-view
+  .col-sm-12
+    .article-tile
+      max-width: 600px
+
+      .article-title-2
+        display: none
+
+      h2
+        font-size: 2em
+
+  .col-md-6
+    .article-tile
+      .article-title-2
+        display: none
+
+  .col-md-4
+    .article-tile
+      .article-title-1
+        display: block
+
+        @media (min-width: $screen-sm-min)
+          display: none
+
+      .article-title-2
+        display: none
+
+        @media (min-width: $screen-sm-min)
+          display: block
+
+
+// ====================
+// Article view
+// ====================
+body.article-view
+  .article-tile
+    .article-title-1
+      display: none
+
+    hr
+      max-width: 100%
+
+    .article-tile-tags
+      display: none
+
+
+// ====================
+// Favourites & Search Results view
+// ====================
+body.favourites-view,
+body.search-results-view
+  .article-tile
+    .article-title-1
+      display: none
+
+    hr
+      max-width: 100%
+
+  .col-xs-12:nth-child(1)
+    .article-tile
+      hr
+        display: none
+
+  @media (min-width: $screen-xs-min)
+    .col-xs-12:nth-child(2)
+      .article-tile
+        hr
+          display: none
+    
+  @media (min-width: $screen-sm-min)
+    .col-xs-12:nth-child(3)
+      .article-tile
+        hr
+          display: none

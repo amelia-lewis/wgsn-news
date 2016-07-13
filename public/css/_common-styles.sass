@@ -6,6 +6,9 @@
   align-items: center
   justify-content: center
 
+.block
+  display: block
+
 .inline-block
   display: inline-block
 
@@ -34,9 +37,15 @@ hr
     height: 1px
     margin: 0 auto
 
+  &.hr-narrow
+    max-width: 200px
+
 .bg-black
   background: black
   color: white
+
+  hr
+    background: white
 
 .bg-white
   background: white

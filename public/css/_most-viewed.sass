@@ -1,0 +1,43 @@
+.most-viewed
+  position: relative
+  
+  &:before
+    content: "<"
+    left: 15px
+
+  &:after
+    content: ">"
+    right: 15px
+
+  &:before,
+  &:after
+    position: absolute
+    display: block
+    top: 50%
+    color: white
+    font-size: 30px
+
+    @media (min-width: $screen-xs-min)
+      font-size: 50px
+
+  .article-tile
+    .article-title-1
+      display: none
+
+  .row:last-child .col-xs-12:last-child
+    display: none
+
+    @media (min-width: $screen-xs-min)
+      display: block
+
+  .dot
+    width: 10px
+    height: 10px
+    background: white
+    border-radius: 50%
+    display: inline-block
+    margin: 0 5px
+
+    &.active
+      border: 1px solid white
+      background: transparent

@@ -1,0 +1,80 @@
+extends ../layout
+
+include ../partials/mixins/article-tile
+//- title, img, author, date, ...tags
+
+block append vars
+  - bodyclass = 'article-view'
+
+block content
+  .content-wrap
+    .row
+      .col-xs-6
+        p &lt; Previous
+
+      .col-xs-6.text-right
+        p Next &gt;
+
+    .row.article-masthead
+      .col-xs-12
+        .block-ver-lg.text-center
+          h2 ASOS powers ahead and no initial mention of Brexit
+          p By Nigel Taylor
+          p.article-subline.text-bigger And now for something completely different… A UK fashion retailer that’s seeing surging sales. Yes, Asos is flying with sales up almost third in the four...
+          p 7 hours ago / Ecommerce, Menswear, Retail, Womenswear
+
+        hr
+
+        .block-ver-lg.text-center
+          img(src="../img/rectangle.jpg" width="100%")
+
+    .row
+      .col-xs-12.col-sm-12.col-md-8
+        .article-utilities-mobile.block-bot-md
+          ul.ul-bare.text-center
+            li.text-uppercase.inline-block.block-hor-sm
+              i.fa.fa-envelope
+              span  Email
+            //- li.text-uppercase.inline-block.block-hor-sm
+            //-   i.fa.fa-print
+            //-   span  Print
+            li.text-uppercase.inline-block.block-hor-sm
+              i.fa.fa-heart
+              span  Add to Favourites
+        
+        .article-text.block-bot-lg
+          p And now for something completely different… A UK fashion retailer that’s seeing surging sales. Yes, Asos is flying with sales up almost third in the four months to June 30 and a promise to end the year up maybe 25% ahead. All that and not one trading statement mention of the ‘B’ word from an online fashion retail giant operating a world away from the beleaguered high street.
+          p Retail sales for the four months period were up 30% to £500.5m, or up 26% currency neutral, underpinned by continued price and proposition investments.
+          p UK sales grew 28% and International was up an even better 31% with the retailer saying it has seen a further acceleration across the US, EU, and rest of world segment.
+          p As anticipated, retail gross margin for the period was down 180 basis points, about 40% of which is due to moving its main sale period forward one week from a year ago.
+          p Its retail gross margin guidance of up to 50 basis points and the retailer said it remains confident in delivering current market expectations for pre-tax profit.
+          p Later in a conference call, that ‘B’ word came up and chief executive Nick Beighton said: “In terms of the EU referendum, it’s difficult to predict what the long-term consequences are going to be for both the UK and Asos.
+          p “But in the shorter term, Asos stands to gain,” he said. “In the medium term, we are expecting a benefit from the weaker exchange rate,” as Asos generates around 60% of its sales overseas.
+
+        .block-bot-lg.text-center.text-bigger
+          i.fa.fa-facebook.block-hor-sm
+          i.fa.fa-twitter.block-hor-sm
+          i.fa.fa-google-plus.block-hor-sm
+          i.fa.fa-pinterest-p.block-hor-sm
+          i.fa.fa-linkedin.block-hor-sm
+
+      .col-xs-12.col-sm-12.col-md-4
+        .article-utilities-desktop.block-bot-lg
+          ul.ul-bare
+            li.text-uppercase
+              i.fa.fa-envelope
+              span  Email
+            li.text-uppercase
+              i.fa.fa-print
+              span  Print
+            li.text-uppercase
+              i.fa.fa-heart
+              span  Add to Favourites
+
+        hr
+        h3 Related News
+        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+        +article-tile("Levi’s profits on lower charges, won’t quit on suffering US department stores", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row: .col-xs-12: include ../partials/most-viewed

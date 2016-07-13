@@ -1,0 +1,19 @@
+extends ../layout
+
+include ../partials/mixins/article-tile
+//- title, img, author, date, ...tags
+
+block append vars
+  - bodyclass = 'favourites-view'
+
+block content
+  .content-wrap
+    .row
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+      .col-xs-12.col-sm-6.col-md-4: +article-tile("adidas sues Skechers, claiming ‘Springblade’ trainer copy", "../img/rectangle.jpg", "Nigel Taylor", "6 Hours Ago", "Menswear", "Retail", "Womenswear")
+
+    .row: .col-xs-12: include ../partials/most-viewed

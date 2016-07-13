@@ -1,39 +1,37 @@
-.most-viewed
-  position: relative
-  
-  &:before
-    content: "<"
-    left: 15px
-
-  &:after
-    content: ">"
-    right: 15px
-
-  &:before,
-  &:after
-    position: absolute
-    display: block
-    top: 50%
-    color: white
-    font-size: 30px
-
-    @media (min-width: $screen-xs-min)
-      font-size: 50px
-
-  .row:last-child .col-xs-12:last-child
+#most-viewed
+  .row:nth-child(2) .col-xs-12:nth-child(2)
     display: none
 
     @media (min-width: $screen-xs-min)
       display: block
 
+  .row:nth-child(2) .col-xs-12:nth-child(3)
+    display: none
+
+    @media (min-width: $screen-sm-min)
+      display: block
+
+  .col-xs-12
+    .block-bot-lg
+      padding-bottom: 30px
+
+  .article-tile
+    overflow: auto
+    border: none
+    
+    img
+      height: 200px
+      width: auto
+      margin: 0 auto
+
   .dot
     width: 10px
     height: 10px
-    background: white
+    background: $md-grey
     border-radius: 50%
     display: inline-block
     margin: 0 5px
 
     &.active
-      border: 1px solid white
+      border: 1px solid $md-grey
       background: transparent

@@ -6,7 +6,7 @@ mixin article-tile(title, img, author, date, ...tags)
       .text.bg-white.block-md.text-center
         p.article-tile-author.serif.text-italic.text-grey By 
           span= author
-        h3.article-tile-title.block.block-top-sm.text-center= title
+        h3.article-tile-title.block.block-top-sm.text-black= title
         p.article-tile-date.serif.text-italic.text-grey= date
         ul.article-tile-tags.ul-bare.text-center
           each tag in tags
